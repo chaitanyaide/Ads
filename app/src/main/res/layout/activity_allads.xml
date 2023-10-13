@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AlladsActivity">
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/actionhome"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@drawable/action4">
+
+        <TextView
+
+            android:id="@+id/info_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ADS"
+            android:textAlignment="center"
+            android:layout_marginTop="15dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="25sp"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/backbtn1"
+            android:layout_marginTop="10dp"
+            android:paddingStart="10dp"
+            android:src="@drawable/backbtn"/>
+
+
+    </RelativeLayout>
+
+    <com.adsmodule.api.adsModule.interfaces.CustomView
+        android:id="@+id/small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/actionhome"
+        app:adType="small"/>
+
+    <com.adsmodule.api.adsModule.interfaces.CustomView
+        android:id="@+id/medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/small"
+        app:adType="medium"/>
+
+    <com.adsmodule.api.adsModule.interfaces.CustomView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/medium"
+        app:adType="full"/>
+
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="btn" />
+
+</RelativeLayout>
